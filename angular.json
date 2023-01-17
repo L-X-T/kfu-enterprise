@@ -837,5 +837,8 @@
       },
       "tags": ["domain:passenger", "type:feature"]
     }
+  },
+  "cli": {
+    "analytics": false
   }
 }

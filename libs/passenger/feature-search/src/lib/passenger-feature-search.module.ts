@@ -2,7 +2,6 @@ import { NgModule } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { FormsModule } from '@angular/forms';
 import { RouterModule } from '@angular/router';
-import { ReactiveComponentModule } from '@ngrx/component';
 import { SearchComponent } from './search.component';
 import { PassengerDomainModule } from '@flight-workspace/passenger/domain';
 
@@ -17,7 +16,6 @@ import { PassengerDomainModule } from '@flight-workspace/passenger/domain';
         component: SearchComponent
       }
     ]),
-    ReactiveComponentModule,
     PassengerDomainModule
   ],
   declarations: [SearchComponent],
