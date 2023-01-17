@@ -391,6 +391,12 @@
     "flight-app": {
       "$schema": "../../node_modules/nx/schemas/project-schema.json",
       "projectType": "application",
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "css",
+          "changeDetection": "OnPush"
+        }
+      },
       "root": "apps/flight-app",
       "sourceRoot": "apps/flight-app/src",
       "prefix": "flight-workspace",
