@@ -81,7 +81,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/dashboard"],
+          "outputs": ["{workspaceRoot}/coverage/apps/dashboard"],
           "options": {
             "jestConfig": "apps/dashboard/jest.config.ts",
             "passWithNoTests": true
@@ -460,10 +460,11 @@
                 "path": "apps/flight-app/webpack.prod.config.js"
               }
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@nrwl/angular:webpack-server",
+          "builder": "@nrwl/angular:webpack-dev-server",
           "options": {
             "browserTarget": "flight-app:build",
             "port": 4200,
@@ -473,7 +474,8 @@
             "production": {
               "browserTarget": "flight-app:build:production"
             }
-          }
+          },
+          "defaultConfiguration": "production"
         },
         "extract-i18n": {
           "builder": "ngx-build-plus:extract-i18n",
@@ -680,7 +682,7 @@
         },
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/apps/luggage"],
+          "outputs": ["{workspaceRoot}/coverage/apps/luggage"],
           "options": {
             "jestConfig": "apps/luggage/jest.config.ts",
             "passWithNoTests": true
@@ -697,7 +699,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/luggage/domain"],
+          "outputs": ["{workspaceRoot}/coverage/libs/luggage/domain"],
           "options": {
             "jestConfig": "libs/luggage/domain/jest.config.ts",
             "passWithNoTests": true
@@ -748,7 +750,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/luggage/feature-checkin"],
+          "outputs": ["{workspaceRoot}/coverage/libs/luggage/feature-checkin"],
           "options": {
             "jestConfig": "libs/luggage/feature-checkin/jest.config.ts",
             "passWithNoTests": true
@@ -771,7 +773,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/luggage/feature-report-loss"],
+          "outputs": ["{workspaceRoot}/coverage/libs/luggage/feature-report-loss"],
           "options": {
             "jestConfig": "libs/luggage/feature-report-loss/jest.config.ts",
             "passWithNoTests": true
@@ -794,7 +796,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/luggage/ui-card"],
+          "outputs": ["{workspaceRoot}/coverage/libs/luggage/ui-card"],
           "options": {
             "jestConfig": "libs/luggage/ui-card/jest.config.ts",
             "passWithNoTests": true
@@ -876,7 +878,7 @@
           "defaultConfiguration": "production"
         },
         "serve": {
-          "builder": "@nrwl/angular:webpack-server",
+          "builder": "@nrwl/angular:webpack-dev-server",
           "configurations": {
             "production": {
               "browserTarget": "passenger:build:production"
@@ -1071,7 +1073,7 @@
       "architect": {
         "test": {
           "builder": "@nrwl/jest:jest",
-          "outputs": ["coverage/libs/shared/auth-lib"],
+          "outputs": ["{workspaceRoot}/coverage/libs/shared/auth-lib"],
           "options": {
             "jestConfig": "libs/shared/auth-lib/jest.config.ts",
             "passWithNoTests": true
